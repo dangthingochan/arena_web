@@ -1,0 +1,183 @@
+@charset "utf-8";
+/* CSS Document */
+@import url('https://fonts.googleapis.com/css2?family=Mea+Culpa&family=Quicksand:wght@300..700&display=swap');
+@import url("../font/stylesheet.css");
+@import url( "all.css");
+
+body /* định dạng cho nguyên 1 trang*/
+{
+background-color: #F0F0F0; /* màu nền cho trang web*/
+color: #111B35; /* màu chữ*/ 
+font-family:"Quicksand", Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif" ;
+font-size: 16px;	
+}
+h1,h2,h3, h4,h5,h6,a, button{margin-bottom:0; margin-top:0}
+a{
+color: #FEAC25;
+text-decoration: none;
+}
+a:hover /* khi đưa chuột và chữ có thẻ a - liên kết trang web nào đó*/
+{
+color: #0004D1
+}
+h1,h2
+{
+font-family: "Quicksand", Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+}
+
+h1{font-size: 45; color: #0004CB; font-weight: bold}
+h2{font-size: 40;color: #0004CB}
+h3{font-size: 32; color: #4259AB}
+h4{font-size: 26;color: #4259AB}
+h5{font-size: 20;color: #4259AB}
+h6{font-size: 16;color: #4259AB}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.img-100 {
+width: 100%;
+}
+
+.container-fluid{ /*dùng khi cần layout toàn trang*/
+width: 100vw; padding-left: 10px; padding-right: 10px;}
+.container { /*giới hạn độ rộng tối đa (1200px) và căn giữa trang*/
+width: 95%;
+margin: auto;
+}
+
+/*Hệ thống lưới*/
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+[class*="col-"] { /*chọn tất cả class chứa "col-", để áp dụng lề và viền*/
+  padding: 15px;
+ /* border: 1px solid blue;*/ /* test hiển thị, bỏ khi deploy */
+}
+
+.col-1  { width: 8.3333%}
+.col-2  { width: 16.6666%}
+.col-3  { width: 25%}
+.col-4  { width: 33.3333%}
+.col-5  { width: 41.6666%}
+.col-6  { width: 50%}
+.col-7  { width: 58.3333%}
+.col-8  { width: 66.6666%}
+.col-9  { width: 75%}
+.col-10 { width: 83.3333%}
+.col-11 { width: 91.6666%}
+.col-12 { width: 100%}
+
+/*-------------------- Responsive Breakpoints --------------------*/
+
+/* Mobile: dưới 600px */
+@media (max-width: 599px) {
+[class*="col-"] {
+width: 100%;
+}
+}
+
+/* Tablet: từ 600px trở lên */
+@media (min-width: 600px) {
+.container {
+width: 90%;
+margin: auto;
+}
+}
+
+/* Desktop: từ 1000px trở lên */
+@media (min-width: 1000px) {
+.container {
+width: 80%;
+margin: auto;
+} 
+
+.font-subtitle
+{
+font-family: "Mea Culpa", cursive;
+font-weight: 600;
+font-style: normal;	
+}
+
+/*thẻ card*/
+.card
+{ 
+background: white;
+border-radius: 15px; /* bo goc*/
+overflow: hidden;
+box-shadow: 10px 10px 0 #FEAC25
+}
+
+.card-body
+{ 
+padding: 20px;
+}
+
+footer
+	{ background: #BCBCBC; width: 100%;padding: 20px 0; margin-top: auto;}
+
+
+/*icon và text căn giữa khung*/
+.info-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 200px; /* hoặc tuỳ theo thiết kế */
+}
+
+.info-box img {
+  max-width: 100px;
+  margin-bottom: 30px;
+}
+
+/*stlye hệ thống màu chữ cho web*/
+.text-primary{ color: #0004D1}/*màu chữ chính*/
+.text-secondary{color: #FEAC25}/*màu chữ phụ*/
+.text-light{color: #EFEEEE}
+.text-dard{color: #0B0A0A}
+/*style hệ thống màu nền background*/
+.bg-primary{color: #299AAF}
+.bg-secondary{color: #4093AC}
+.bg-light{color: #E7B9BA}
+.bg-dark{color: #552D2E}
+
+/*style cho nút button*/
+.btn-primary{ background-color: #FEAC25; color: #0004D1; border-radius: 4px}
+.btn-primary:hover{background-color:#0004D1; color: white}
+.btn-secondary{background-color:#0004D1; color: #FEAC25}
+.btn-secondary:hover{background-color:#FEAC25; color: white}
+/*style cho menu chỉ dùng đc cho pc*/
+ul.menu
+{display: flex;
+padding: 0;
+list-style: none;
+justify-content:space-between;
+border-radius: 20px}
+
+ul.menu li a
+{
+padding: 8px 16px;
+background-color:#FEAC25;
+color: aliceblue;
+margin: 2px;
+border-radius: 20px
+}
+ul.menu li a:hover
+{
+background-color:white;
+border-bottom: 5px solid #FEAC25;
+color: #FEAC25;	
+}
+.my-100{margin-top: 100px; margin-bottom: 100px}
+
+
+
+
+
+
+
